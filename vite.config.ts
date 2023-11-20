@@ -13,7 +13,7 @@ export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
-    dts({ include: ['lib'] })
+    dts({ include: ['lib'], copyDtsFiles: true })
   ],
   build: {
     lib: {
@@ -24,7 +24,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
       input: Object.fromEntries(
-        glob.sync('lib/**/*.{ts,tsx}', { ignore: 'lib/**/*.stories.tsx' }).map(file => [
+        glob.sync('lib/**/!(*.d).{ts,tsx}', { ignore: 'lib/**/*.stories.tsx' }).map(file => [
           // The name of entry point
           // lib/nested/foo.ts becomes nested/foo
           relative(

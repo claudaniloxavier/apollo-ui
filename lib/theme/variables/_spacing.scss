@@ -1,0 +1,15 @@
+@use '../helpers.scss' as *;
+
+$spacing-nano: to-rem(2);
+$spacing-tiny: to-rem(4);
+$spacing-xxxs: to-rem(8);
+$spacing-xxs: to-rem(12);
+$spacing-xs: to-rem(16);
+$spacing-sm: to-rem(20);
+$spacing-md: to-rem(24);
+$spacing-lg: to-rem(32);
+$spacing-xl: to-rem(40);
+$spacing-xxl: to-rem(48);
+$spacing-xxxl: to-rem(64);
+$spacing-huge: to-rem(80);
+$spacing-giga: to-rem(128);

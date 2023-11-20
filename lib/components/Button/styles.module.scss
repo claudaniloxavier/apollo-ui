@@ -1,0 +1,12 @@
+@use '../../theme/variables/color' as color;
+@use '../../theme/variables/border' as border;
+@use '../../theme/variables/spacing' as spacing;
+@use '../../theme/variables/font' as font;
+
+.button {
+  background-color: color.$primary-500;
+  padding: spacing.$spacing-xs;
+  border: border.$width-thick solid color.$primary-600;
+  font-family: font.$family-primary;
+  font-weight: font.$weight-regular;
+}

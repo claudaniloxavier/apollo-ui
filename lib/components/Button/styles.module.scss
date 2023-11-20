@@ -3,10 +3,160 @@
 @use '../../theme/variables/spacing' as spacing;
 @use '../../theme/variables/font' as font;
 
+$disabled-opacity: 0.4;
+
 .button {
-  background-color: color.$primary-500;
   padding: spacing.$spacing-xs;
-  border: border.$width-thick solid color.$primary-600;
   font-family: font.$family-primary;
   font-weight: font.$weight-regular;
+
+  &.primary {
+    &.solid {
+      background-color: color.$primary-500;
+      border: border.$width-thin solid color.$primary-400;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$primary-500;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.text {
+      color: color.$primary-500;
+      border: none;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+  }
+
+  &.secondary {
+    &.solid {
+      background-color: color.$secondary-500;
+      border: border.$width-thin solid color.$secondary-400;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$secondary-500;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.text {
+      color: color.$secondary-500;
+      border: none;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+  }
+
+  &.success {
+    &.solid {
+      background-color: color.$success-500;
+      border: border.$width-thin solid color.$success-400;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$success-500;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.text {
+      color: color.$success-500;
+      border: none;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+  }
+
+  &.error {
+    &.solid {
+      background-color: color.$error-500;
+      border: border.$width-thin solid color.$error-400;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$error-500;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.text {
+      color: color.$error-500;
+      border: none;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+  }
+
+  &.warning {
+    &.solid {
+      background-color: color.$warning-500;
+      border: border.$width-thin solid color.$warning-400;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$warning-500;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+
+    &.text {
+      color: color.$warning-500;
+      border: none;
+      background: none;
+
+      &:disabled {
+        opacity: $disabled-opacity;
+      }
+    }
+  }
 }

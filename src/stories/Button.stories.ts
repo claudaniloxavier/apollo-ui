@@ -21,9 +21,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const World: Story = {
+export const Solid: Story = {
   args: {
     children: 'Hello World 🌍!',
+    variant: 'primary',
+    disabled: true
   },
 };
 

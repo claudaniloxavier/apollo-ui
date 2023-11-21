@@ -21,16 +21,62 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Solid: Story = {
+export const Primary: Story = {
   args: {
-    children: 'Hello World 🌍!',
+    children: 'Primary',
     variant: 'primary',
-    disabled: true
+    shape: 'solid',
+    size: 'medium',
+    radius: 'default',
+    raised: false,
+    disabled: false,
   },
 };
 
-export const Mars: Story = {
+export const Secondary: Story = {
   args: {
-    children: 'Hello Mars🚀!',
+    children: 'Secondary',
+    variant: 'secondary',
+    shape: 'solid',
+    size: 'medium',
+    radius: 'default',
+    raised: false,
+    disabled: false
+  },
+};
+
+export const Success: Story = {
+  args: {
+    children: 'Success',
+    variant: 'success',
+    shape: 'solid',
+    size: 'medium',
+    radius: 'default',
+    raised: false,
+    disabled: false
+  },
+};
+
+export const Error: Story = {
+  args: {
+    children: 'Error',
+    variant: 'error',
+    shape: 'solid',
+    size: 'medium',
+    radius: 'default',
+    raised: false,
+    disabled: false
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    children: 'Warning',
+    variant: 'warning',
+    shape: 'solid',
+    size: 'medium',
+    radius: 'default',
+    raised: false,
+    disabled: false
   },
 };

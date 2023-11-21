@@ -16,6 +16,7 @@ const Button: FC<Props> = ({
   radius = 'default',
   raised = false,
   disabled = false,
+  icon,
   ...rest 
 }: Props) => {
   return (
@@ -44,6 +45,7 @@ const Button: FC<Props> = ({
       })} 
       {...rest} 
     >
+      {icon}
       {children}
     </button>
   )

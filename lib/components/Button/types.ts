@@ -7,5 +7,6 @@ export interface ButtonProps extends buttonOwnProps {
   variant?: 'primary' | 'secondary' | 'success' | 'error' | 'warning'
   size?: 'small' | 'medium' | 'large' | 'x-large',
   radius?: 'default' | 'pill',
-  raised?: boolean
+  raised?: boolean,
+  icon?: JSX.Element
 }

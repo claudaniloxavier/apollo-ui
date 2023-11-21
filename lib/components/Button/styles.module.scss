@@ -1,162 +1,146 @@
+@use '../../theme/helpers.scss' as *;
 @use '../../theme/variables/color' as color;
 @use '../../theme/variables/border' as border;
 @use '../../theme/variables/spacing' as spacing;
 @use '../../theme/variables/font' as font;
 
-$disabled-opacity: 0.4;
+$disabled-opacity: 0.42;
 
 .button {
-  padding: spacing.$spacing-xs;
-  font-family: font.$family-primary;
-  font-weight: font.$weight-regular;
+  font-family: font.$family-secondary;
+  font-weight: font.$weight-medium;
+  text-transform: uppercase;
+  border: border.$width-thick solid transparent;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: $disabled-opacity;
+  }
 
   &.primary {
     &.solid {
       background-color: color.$primary-500;
-      border: border.$width-thin solid color.$primary-400;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
+      color: color.$white;
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$primary-500;
+      border: border.$width-thick solid color.$primary-500;
+      color: color.$primary-500;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
 
     &.text {
       color: color.$primary-500;
-      border: none;
+      border-color: transparent;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
   }
 
   &.secondary {
     &.solid {
       background-color: color.$secondary-500;
-      border: border.$width-thin solid color.$secondary-400;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
+      color: color.$white;
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$secondary-500;
+      border: border.$width-thick solid color.$secondary-500;
+      color: color.$secondary-500;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
 
     &.text {
       color: color.$secondary-500;
-      border: none;
+      border-color: transparent;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
   }
 
   &.success {
     &.solid {
       background-color: color.$success-500;
-      border: border.$width-thin solid color.$success-400;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
+      color: color.$white;
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$success-500;
+      border: border.$width-thick solid color.$success-500;
+      color: color.$success-500;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
 
     &.text {
       color: color.$success-500;
-      border: none;
+      border-color: transparent;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
   }
 
   &.error {
     &.solid {
       background-color: color.$error-500;
-      border: border.$width-thin solid color.$error-400;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
+      color: color.$white;
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$error-500;
+      border: border.$width-thick solid color.$error-500;
+      color: color.$error-500;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
 
     &.text {
       color: color.$error-500;
-      border: none;
+      border-color: transparent;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
   }
 
   &.warning {
     &.solid {
       background-color: color.$warning-500;
-      border: border.$width-thin solid color.$warning-400;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
+      color: color.$black;
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$warning-500;
+      border: border.$width-thick solid color.$warning-500;
+      color: color.$warning-500;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
 
     &.text {
       color: color.$warning-500;
-      border: none;
+      border-color: transparent;
       background: none;
-
-      &:disabled {
-        opacity: $disabled-opacity;
-      }
     }
+  }
+
+  &.small {
+    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
+    font-size: font.$size-xxxs;
+  }
+
+  &.medium {
+    padding: spacing.$spacing-xxs spacing.$spacing-xs;
+    font-size: font.$size-xxs;
+  }
+
+  &.large {
+    padding: spacing.$spacing-xs spacing.$spacing-sm;
+    font-size: font.$size-xs;
+  }
+
+  &.xlarge {
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+    font-size: font.$size-sm;
+  }
+
+  &.radius {
+    border-radius: border.$radius-sm;
+  }
+
+  &.pill {
+    border-radius: border.$radius-pill;
+  }
+
+  &.raised {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
   }
 }

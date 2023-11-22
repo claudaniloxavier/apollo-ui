@@ -3,11 +3,11 @@
 $family-primary: 'Barlow', sans-serif;
 $family-secondary: 'Archivo', sans-serif;
 
-$weight-light: '300';
-$weight-regular: '400';
-$weight-medium: '500';
-$weight-semibold: '600';
-$weight-bold: '700';
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
 
 $size-nano: to-rem(6);
 $size-tiny: to-rem(8);
@@ -20,3 +20,6 @@ $size-lg: to-rem(24);
 $size-xl: to-rem(32);
 $size-xxl: to-rem(40);
 $size-xxxl: to-rem(48);
+
+$line-height-primary: to-rem(4);
+$line-height-secondary: to-rem(8);

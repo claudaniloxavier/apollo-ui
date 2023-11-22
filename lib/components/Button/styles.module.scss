@@ -1,12 +1,294 @@
+@use '../../theme/helpers.scss' as *;
 @use '../../theme/variables/color' as color;
 @use '../../theme/variables/border' as border;
 @use '../../theme/variables/spacing' as spacing;
 @use '../../theme/variables/font' as font;
 
+$disabled-opacity: 0.42;
+
 .button {
-  background-color: color.$primary-500;
-  padding: spacing.$spacing-xs;
-  border: border.$width-thick solid color.$primary-600;
-  font-family: font.$family-primary;
-  font-weight: font.$weight-regular;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: spacing.$spacing-xxs;
+  margin: spacing.$spacing-xxxs;
+  min-width: to-rem(54);
+  font-family: font.$family-secondary;
+  font-weight: font.$weight-medium;
+  text-transform: uppercase;
+  border: border.$width-thin solid transparent;
+  transition: all 180ms ease-in-out;
+  user-select: none;
+  overflow: hidden;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: $disabled-opacity;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      color: inherit;
+    }
+  }
+
+  .label {
+    transform: translateY(1px);
+  }
+
+  // -------------------
+  // COLORS
+  // -------------------
+
+  &.primary {
+    &.solid {
+      background-color: color.$primary-500;
+      color: color.$white;
+
+      &:hover {
+        background-color: color.$primary-700;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$primary-500;
+      color: color.$primary-500;
+      background: none;
+
+      &:hover {
+        background-color: color.$primary-100;
+        color: color.$primary-700;
+      }
+    }
+
+    &.text {
+      color: color.$primary-500;
+      border-color: transparent;
+      background: none;
+
+      &:hover {
+        background-color: color.$primary-50;
+        color: color.$primary-700;
+      }
+    }
+  }
+
+  &.secondary {
+    &.solid {
+      background-color: color.$secondary-500;
+      color: color.$white;
+
+      &:hover {
+        background-color: color.$secondary-700;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$secondary-500;
+      color: color.$secondary-500;
+      background: none;
+
+      &:hover {
+        background-color: color.$secondary-100;
+        color: color.$secondary-700
+      }
+    }
+
+    &.text {
+      color: color.$secondary-500;
+      border-color: transparent;
+      background: none;
+
+      &:hover {
+        background-color: color.$secondary-50;
+        color: color.$secondary-700;
+      }
+    }
+  }
+
+  &.success {
+    &.solid {
+      background-color: color.$success-500;
+      color: color.$white;
+
+      &:hover {
+        background-color: color.$success-700;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$success-500;
+      color: color.$success-500;
+      background: none;
+
+      &:hover {
+        background-color: color.$success-100;
+        color: color.$success-700;
+      }
+    }
+
+    &.text {
+      color: color.$success-500;
+      border-color: transparent;
+      background: none;
+
+      &:hover {
+        background-color: color.$success-50;
+        color: color.$success-700;
+      }
+    }
+  }
+
+  &.error {
+    &.solid {
+      background-color: color.$error-500;
+      color: color.$white;
+
+      &:hover {
+        background-color: color.$error-700;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$error-500;
+      color: color.$error-500;
+      background: none;
+
+      &:hover {
+        background-color: color.$error-100;
+        color: color.$error-700;
+      }
+    }
+
+    &.text {
+      color: color.$error-500;
+      border-color: transparent;
+      background: none;
+
+      &:hover {
+        background-color: color.$error-50;
+        color: color.$error-700;
+      }
+    }
+  }
+
+  &.warning {
+    &.solid {
+      background-color: color.$warning-400;
+      color: color.$black;
+
+      &:hover {
+        background-color: color.$warning-500;
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid color.$warning-500;
+      color: color.$warning-500;
+      background: none;
+
+      &:hover {
+        background-color: color.$warning-50;
+        color: color.$warning-700;
+      }
+    }
+
+    &.text {
+      color: color.$warning-700;
+      border-color: transparent;
+      background: none;
+
+      &:hover {
+        background-color: color.$warning-50;
+        color: color.$warning-800;
+      }
+    }
+  }
+
+  // -------------------
+  // SIZES
+  // -------------------
+
+  &.small {
+    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
+    font-size: font.$size-xxxs;
+    line-height: calc(font.$size-xxxs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(16);
+      height: to-rem(16);
+    }
+  }
+
+  &.medium {
+    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
+    font-size: font.$size-xxs;
+    line-height: calc(font.$size-xxs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(18);
+      height: to-rem(18);
+    }
+  }
+
+  &.large {
+    padding: spacing.$spacing-xxs spacing.$spacing-xs;
+    font-size: font.$size-xs;
+    line-height: calc(font.$size-xs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(20);
+      height: to-rem(20);
+    }
+  }
+
+  &.xlarge {
+    padding: spacing.$spacing-xs spacing.$spacing-sm;
+    font-size: font.$size-sm;
+    line-height: calc(font.$size-sm + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(22);
+      height: to-rem(22);
+    }
+  }
+
+  // -------------------
+  // RADIUS
+  // -------------------
+
+  &.radius {
+    border-radius: border.$radius-sm;
+  }
+
+  &.pill {
+    border-radius: border.$radius-pill;
+  }
+
+  &.raised {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  }
+
+  // -------------------
+  // ICON ALIGNMENT
+  // -------------------
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.rowReverse {
+    flex-direction: row-reverse;
+  }
 }

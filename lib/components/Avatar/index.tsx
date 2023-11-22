@@ -25,6 +25,7 @@ const Avatar: FC<Props> = ({
       {...rest} 
     >
       A
+      {children}
     </div>
   )
 }

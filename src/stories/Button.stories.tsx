@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../../lib/main';
 
-// import GithubIcon from './assets/github.svg'
-
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Button',
@@ -31,7 +29,7 @@ export const Primary: Story = {
     size: 'medium',
     radius: 'default',
     raised: false,
-    disabled: false
+    disabled: false,
   },
 };
 

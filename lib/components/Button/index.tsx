@@ -17,10 +17,13 @@ const Button: FC<Props> = ({
   raised = false,
   disabled = false,
   icon,
+  iconPosition = 'left',
+  onClick,
   ...rest 
 }: Props) => {
   return (
-    <button 
+    <button
+      onClick={disabled ? undefined : onClick} 
       disabled={disabled}
       className={classNames(className, styles.button, {
         [styles.primary]: variant === 'primary',
@@ -41,12 +44,22 @@ const Button: FC<Props> = ({
         [styles.radius]: radius === 'default',
         [styles.pill]: radius === 'pill',
 
-        [styles.raised]: raised === true && shape === 'solid'
+        [styles.raised]: raised === true && shape === 'solid',
+
+        [styles.row]: iconPosition === 'left',
+        [styles.rowReverse]: iconPosition === 'right'
       })} 
       {...rest} 
     >
-      {icon}
-      {children}
+      {icon && (
+        <span className={styles.icon}>
+          {icon}
+        </span>
+      )}
+      
+      <span className={styles.label}>
+        {children}
+      </span>
     </button>
   )
 }

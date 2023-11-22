@@ -7,15 +7,42 @@
 $disabled-opacity: 0.42;
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: spacing.$spacing-xxs;
+  margin: spacing.$spacing-xxxs;
+  min-width: to-rem(54);
   font-family: font.$family-secondary;
   font-weight: font.$weight-medium;
   text-transform: uppercase;
   border: border.$width-thin solid transparent;
   transition: all 180ms ease-in-out;
+  user-select: none;
 
   &:disabled {
     cursor: not-allowed;
     opacity: $disabled-opacity;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      color: inherit;
+    }
+  }
+
+  .label {
+    transform: translateY(1px);
   }
 
   // -------------------
@@ -194,30 +221,54 @@ $disabled-opacity: 0.42;
   &.small {
     padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
     font-size: font.$size-xxxs;
+    line-height: calc(font.$size-xxxs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(16);
+      height: to-rem(16);
+    }
   }
 
   &.medium {
-    padding: spacing.$spacing-xxs spacing.$spacing-xs;
+    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
     font-size: font.$size-xxs;
+    line-height: calc(font.$size-xxs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(18);
+      height: to-rem(18);
+    }
   }
 
   &.large {
-    padding: spacing.$spacing-xs spacing.$spacing-sm;
+    padding: spacing.$spacing-xxs spacing.$spacing-xs;
     font-size: font.$size-xs;
+    line-height: calc(font.$size-xs + font.$line-height-primary);
+
+    .icon {
+      width: to-rem(20);
+      height: to-rem(20);
+    }
   }
 
   &.xlarge {
-    padding: spacing.$spacing-sm spacing.$spacing-md;
+    padding: spacing.$spacing-xs spacing.$spacing-sm;
     font-size: font.$size-sm;
-  }
+    line-height: calc(font.$size-sm + font.$line-height-primary);
 
-  &.radius {
-    border-radius: border.$radius-sm;
+    .icon {
+      width: to-rem(22);
+      height: to-rem(22);
+    }
   }
 
   // -------------------
   // RADIUS
   // -------------------
+
+  &.radius {
+    border-radius: border.$radius-sm;
+  }
 
   &.pill {
     border-radius: border.$radius-pill;
@@ -225,5 +276,17 @@ $disabled-opacity: 0.42;
 
   &.raised {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  }
+
+  // -------------------
+  // ICON ALIGNMENT
+  // -------------------
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.rowReverse {
+    flex-direction: row-reverse;
   }
 }

@@ -9,4 +9,5 @@ export interface ButtonProps extends buttonOwnProps {
   radius?: 'default' | 'pill',
   raised?: boolean,
   icon?: JSX.Element
+  iconPosition?: 'left' | 'right'
 }

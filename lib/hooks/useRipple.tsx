@@ -10,9 +10,9 @@ const useRipple = <T extends HTMLElement>(ref: RefObject<T>) => {
       const element = ref.current
 
       const clickHandler = (e: MouseEvent) => {
-        var rect = element.getBoundingClientRect()
-        var left = e.clientX - rect.left
-        var top = e.clientY - rect.top
+        const rect = element.getBoundingClientRect()
+        const left = e.clientX - rect.left
+        const top = e.clientY - rect.top
 
         const height = element.clientHeight
         const width = element.clientWidth

@@ -7,6 +7,7 @@
 $disabled-opacity: 0.42;
 
 .button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +20,7 @@ $disabled-opacity: 0.42;
   border: border.$width-thin solid transparent;
   transition: all 180ms ease-in-out;
   user-select: none;
+  overflow: hidden;
 
   &:disabled {
     cursor: not-allowed;

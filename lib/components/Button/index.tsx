@@ -1,11 +1,14 @@
-import { FC } from 'react'
+import { FC, useRef } from 'react'
+
+// HOOKS
+import useRipple from '../../hooks/useRipple'
+
+// TYPES
+import { ButtonProps as Props } from './types'
 
 // STYLES
 import classNames from 'classnames'
 import styles from './styles.module.scss'
-
-// TYPES
-import { ButtonProps as Props } from './types'
 
 const Button: FC<Props> = ({ 
   className,
@@ -21,8 +24,12 @@ const Button: FC<Props> = ({
   onClick,
   ...rest 
 }: Props) => {
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const ripples = useRipple(buttonRef)
+
   return (
     <button
+      ref={buttonRef}
       onClick={disabled ? undefined : onClick} 
       disabled={disabled}
       className={classNames(className, styles.button, {
@@ -51,6 +58,8 @@ const Button: FC<Props> = ({
       })} 
       {...rest} 
     >
+      {ripples}
+
       {icon && (
         <span className={styles.icon}>
           {icon}

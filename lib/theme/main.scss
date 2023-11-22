@@ -3,3 +3,10 @@
 // body {
 //   background-color: red;
 // }
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

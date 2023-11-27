@@ -1,0 +1,22 @@
+name: Build
+description: Install deps and build lib
+
+runs:
+  using: "composite"
+  steps:
+    - name: Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 20
+
+    - name: Install npm cli login
+      shell: bash
+      run: npm install -g npm-cli-login
+
+    - name: Install dependencies
+      run: npm install
+      shell: bash
+
+    - name: Build
+      run: npm run build
+      shell: bash

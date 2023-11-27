@@ -31,10 +31,12 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-      - name: Print 'Version
+      - name: Print Version
         run: |
           echo "The latest version is $(grep version package.json | awk -F: '{ print $2 }' | tr -d \")"
 
       - name: Publish new release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish
         

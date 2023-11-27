@@ -13,6 +13,10 @@ runs:
       shell: bash
       run: npm install -g npm-cli-login
 
+    - name: NPM login
+      shell: bash
+      run: npm login
+
     - name: Install dependencies
       run: npm install
       shell: bash

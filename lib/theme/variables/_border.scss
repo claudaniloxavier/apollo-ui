@@ -1,0 +1,12 @@
+@use '../helpers.scss' as *;
+
+$radius-circle: 50%;
+$radius-pill: to-rem(999);
+$radius-xs: to-rem(2);
+$radius-sm: to-rem(4);
+$radius-md: to-rem(8);
+$radius-lg: to-rem(12);
+$radius-xl: to-rem(16);
+
+$width-thin: to-rem(1);
+$width-thick: to-rem(2);

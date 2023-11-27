@@ -21,9 +21,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    children: 'Primary',
+    name: 'Barry Allen',
+    size: 'md'
+  },
+};
+
+export const WithImage: Story = {
+  args: {
+    name: 'Miles Morales',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjHgsVzd219uJAtOb2q0zmXGA-aywczrDp3w&usqp=CAU',
     size: 'md'
   },
 };

@@ -2,7 +2,7 @@ name: Build lib
 description: Install deps and build library
 
 runs:
-  using: "composite",
+  using: "composite"
   steps: 
     - name: Setup Node.js
       uses: actions/setup-node@v2

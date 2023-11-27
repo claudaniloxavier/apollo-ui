@@ -8,12 +8,13 @@ import classNames from 'classnames'
 import styles from './styles.module.scss'
 
 const Avatar: FC<Props> = ({ 
-  className,
-  name,
-  image,
-  size = 'md',
   backgroundColor = '#339AF0',
+  className,
   fontColor = '#FFFFFF',
+  image,
+  name,
+  size = 'md',
+  withTitle = true,
   ...rest 
 }: Props) => {
   const getInitials = (): string => {
@@ -34,6 +35,7 @@ const Avatar: FC<Props> = ({
         [styles.large]: size === 'lg',
         [styles.xlarge]: size === 'xl',
       })}
+      title={withTitle ? name : undefined}
       style={{
         backgroundColor: backgroundColor
       }} 

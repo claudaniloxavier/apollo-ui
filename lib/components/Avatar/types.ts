@@ -8,4 +8,5 @@ export interface AvatarProps extends DivOwnProps {
   image?: string
   backgroundColor?: string
   fontColor?: string
+  withTitle?: boolean
 }

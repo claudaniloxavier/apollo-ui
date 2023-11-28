@@ -1,6 +1,5 @@
 {
   "name": "orion-kit",
-  "private": true,
   "version": "1.0.0",
   "author": "Claudanilo Xavier <claudaniloxavier@gmail.com>",
   "type": "module",

@@ -36,7 +36,7 @@ jobs:
           echo "The latest version is $(grep version package.json | awk -F: '{ print $2 }' | tr -d \")"
 
       - name: Publish new release
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
         

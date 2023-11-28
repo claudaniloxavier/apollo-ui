@@ -47,10 +47,6 @@ $disabled-opacity: 0.42;
     transform: translateY(1px);
   }
 
-  // -------------------
-  // COLORS
-  // -------------------
-
   &.primary {
     &.solid {
       background-color: color.$primary-500;
@@ -216,10 +212,6 @@ $disabled-opacity: 0.42;
     }
   }
 
-  // -------------------
-  // SIZES
-  // -------------------
-
   &.small {
     padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
     font-size: font.$size-xxxs;
@@ -264,10 +256,6 @@ $disabled-opacity: 0.42;
     }
   }
 
-  // -------------------
-  // RADIUS
-  // -------------------
-
   &.radius {
     border-radius: border.$radius-sm;
   }
@@ -279,10 +267,6 @@ $disabled-opacity: 0.42;
   &.raised {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
   }
-
-  // -------------------
-  // ICON ALIGNMENT
-  // -------------------
 
   &.row {
     flex-direction: row;

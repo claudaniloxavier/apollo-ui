@@ -23,6 +23,14 @@ export const Default: Story = {
   },
 };
 
+export const TwoLetters: Story = {
+  args: {
+    name: 'Barry Allen',
+    size: 'md',
+    doubleInitials: true
+  },
+};
+
 export const WithImage: Story = {
   args: {
     name: 'Miles Morales',

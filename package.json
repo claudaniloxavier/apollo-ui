@@ -1,7 +1,8 @@
 {
-  "name": "apollo-ui",
+  "name": "orion-kit",
   "private": true,
   "version": "1.0.0",
+  "author": "Claudanilo Xavier <claudaniloxavier@gmail.com>",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -10,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/claudaniloxavier/apollo-ui"
+    "url": "git+https://github.com/claudaniloxavier/orion-kit.git"
   },
   "sideEffects": [
     "**/*.css"
@@ -25,6 +26,9 @@
     "build-storybook": "storybook build",
     "prepublishOnly": "npm run build",
     "prepare": "husky install"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "react": "^18.2.0",

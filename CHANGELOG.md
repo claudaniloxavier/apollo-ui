@@ -1,5 +1,19 @@
 # Changelog
 
+# [1.1.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.1...v1.1.0) (2023-11-28)
+
+
+### Bug Fixes
+
+* adjust npmignore ([c7dfd8a](https://github.com/claudaniloxavier/orion-kit/commit/c7dfd8ac979f9d6274a74522efa8efd11663a789))
+* remove comments ([ff211c8](https://github.com/claudaniloxavier/orion-kit/commit/ff211c8d377a9d59c7fda2359e3d118fb7dbc8f0))
+* remove file ([4fa964f](https://github.com/claudaniloxavier/orion-kit/commit/4fa964f1a2a2103c0973720bde9192fceabce1d0))
+
+
+### Features
+
+* added square avatars ([2bc39e2](https://github.com/claudaniloxavier/orion-kit/commit/2bc39e26494002d0267d9814e6dff20baf0219b7))
+
 ## [1.0.1](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.0...v1.0.1) (2023-11-28)
 
 

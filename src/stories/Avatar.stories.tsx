@@ -34,7 +34,33 @@ export const TwoLetters: Story = {
 export const WithImage: Story = {
   args: {
     name: 'Miles Morales',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjHgsVzd219uJAtOb2q0zmXGA-aywczrDp3w&usqp=CAU',
+    image: 'https://cdn.vrcmods.com/uploads/items/item/4284/imgs/67099763a2b04c39995c281559b817ab.jpg',
     size: 'md'
+  },
+};
+
+export const Square: Story = {
+  args: {
+    name: 'Barry Allen',
+    size: 'md',
+    type: 'square'
+  },
+};
+
+export const SquareWithTwoLetters: Story = {
+  args: {
+    name: 'Barry Allen',
+    size: 'md',
+    doubleInitials: true,
+    type: 'square'
+  },
+};
+
+export const SquareWithImage: Story = {
+  args: {
+    name: 'Barry Allen',
+    size: 'md',
+    type: 'square',
+    image: 'https://cdn.vrcmods.com/uploads/items/item/4284/imgs/67099763a2b04c39995c281559b817ab.jpg',
   },
 };

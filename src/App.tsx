@@ -1,5 +1,5 @@
-// ApolloUI lib Components
-import { Button, Input } from '../'
+// OrionKit lib Components
+import { Button, Input } from '../lib/main'
 
 // STYLES
 import './App.css'
@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <Button>
-        Appolo ui button
+        OrionKit button
       </Button>
 
-      <Input type='text' placeholder='Appolo ui input' />
+      <Input type='text' placeholder='OrionKit input' />
     </>
   )
 }

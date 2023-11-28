@@ -14,6 +14,7 @@ const Avatar: FC<Props> = ({
   image,
   name,
   size = 'md',
+  type = 'rounded',
   withTitle = true,
   doubleInitials = false,
   ...rest 
@@ -39,6 +40,8 @@ const Avatar: FC<Props> = ({
         [styles.medium]: size === 'md',
         [styles.large]: size === 'lg',
         [styles.xlarge]: size === 'xl',
+        [styles.rounded]: type === 'rounded',
+        [styles.square]: type === 'square'
       })}
       title={withTitle ? name : undefined}
       style={{

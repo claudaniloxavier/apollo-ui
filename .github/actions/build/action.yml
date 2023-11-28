@@ -13,12 +13,6 @@ runs:
       shell: bash
       run: npm install -g npm-cli-login
 
-    - name: NPM login
-      shell: bash
-      run: npm login
-      env: 
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
     - name: Install dependencies
       run: npm install
       shell: bash

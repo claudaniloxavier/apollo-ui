@@ -17,16 +17,26 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 20
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
-      # - name: Run Tests 
-        # run: npm test
+      - name: Build library
+        uses: ./.github/actions/build
 
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+
+      - name: Print version
+        run: |
+          echo "The latest version is $(grep version package.json | awk -F: '{ print $2 }' | tr -d \")"
+
+      - name: Publish new release
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         

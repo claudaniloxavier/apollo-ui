@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.0...v1.0.1) (2023-11-28)
+
+
+### Bug Fixes
+
+* added single name behaviour on avatar ([9514ae5](https://github.com/claudaniloxavier/orion-kit/commit/9514ae5eb417a7a2233cb7c15f887ce4dcd9443f))
+
 # 1.0.0 (2023-11-27)
 
 

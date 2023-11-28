@@ -1,6 +1,6 @@
 {
   "name": "orion-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Claudanilo Xavier <claudaniloxavier@gmail.com>",
   "type": "module",
   "main": "dist/main.js",

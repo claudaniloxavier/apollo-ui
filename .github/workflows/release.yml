@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    banches:
+    branches:
       - releases
 
 jobs: 

@@ -1,0 +1,101 @@
+@use '../../theme/helpers.scss' as *;
+@use '../../theme/variables/color' as color;
+@use '../../theme/variables/border' as border;
+@use '../../theme/variables/spacing' as spacing;
+@use '../../theme/variables/font' as font;
+
+.textFieldRoot {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &.primary {
+    &:focus-within {
+      .label {
+        color: color.$primary-500;
+      }
+    }
+
+    .input {
+      &:focus-visible {
+        border-color: transparent;
+        outline: 2px solid color.$primary-500;
+      }
+    }
+  }
+
+  &.secondary {
+    &:focus-within {
+      .label {
+        color: color.$secondary-500;
+      }
+    }
+
+    .input {
+      &:focus-visible {
+        border-color: transparent;
+        outline: 2px solid color.$secondary-500;
+      }
+    }
+  }
+
+  &.error {
+
+    .label,
+    .hint {
+      color: color.$error-500
+    }
+
+    .input {
+      border: 1px solid color.$error-500;
+
+      &:focus-visible {
+        border-color: transparent;
+        outline: 2px solid color.$error-500;
+      }
+    }
+  }
+
+  .label {
+    font-family: font.$family-primary;
+    font-size: 14px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: color.$dark-transparent-80;
+  }
+
+  .input {
+    font-family: font.$family-primary;
+    border: 1px solid color.$dark-transparent-8;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+
+    &::placeholder {
+      color: color.$dark-transparent-48
+    }
+
+    &.small {
+      padding: 8px 12px;
+    }
+
+    &.medium {
+      padding: 12px;
+    }
+
+    &.large {
+      padding: 16px 12px;
+    }
+  }
+
+  .hint {
+    font-family: font.$family-primary;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: color.$dark-transparent-48;
+  }
+}

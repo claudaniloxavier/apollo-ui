@@ -1,5 +1,33 @@
 # Changelog
 
+# [1.2.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.1.0...v1.2.0) (2023-12-07)
+
+
+### Bug Fixes
+
+* change avatar default family ([638c3fa](https://github.com/claudaniloxavier/orion-kit/commit/638c3fa2c264e310d803d8eebc2ea9280a2b6ae2))
+* fix button disabled hover behaviour ([8120f25](https://github.com/claudaniloxavier/orion-kit/commit/8120f256523179228ef042e27aab6f8cb6e4ccbb))
+
+
+### Features
+
+* created textfield component ([eeb770b](https://github.com/claudaniloxavier/orion-kit/commit/eeb770b0fe88604cd733c721888fc9413535506d))
+* finish input styles ([96f2af4](https://github.com/claudaniloxavier/orion-kit/commit/96f2af4ed4e3f0e1a9852c5e704c8488ac63b31d))
+
+# [1.1.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.1...v1.1.0) (2023-11-28)
+
+
+### Bug Fixes
+
+* adjust npmignore ([c7dfd8a](https://github.com/claudaniloxavier/orion-kit/commit/c7dfd8ac979f9d6274a74522efa8efd11663a789))
+* remove comments ([ff211c8](https://github.com/claudaniloxavier/orion-kit/commit/ff211c8d377a9d59c7fda2359e3d118fb7dbc8f0))
+* remove file ([4fa964f](https://github.com/claudaniloxavier/orion-kit/commit/4fa964f1a2a2103c0973720bde9192fceabce1d0))
+
+
+### Features
+
+* added square avatars ([2bc39e2](https://github.com/claudaniloxavier/orion-kit/commit/2bc39e26494002d0267d9814e6dff20baf0219b7))
+
 ## [1.0.1](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.0...v1.0.1) (2023-11-28)
 
 

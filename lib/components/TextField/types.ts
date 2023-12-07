@@ -7,4 +7,7 @@ export interface TextFieldProps extends TextFieldOwnProps {
   height?: 'small' | 'medium' | 'large',
   hintMessage?: string
   label?: string
+  block?: boolean
+  icon?: JSX.Element
+  iconPosition?: 'left' | 'right'
 }

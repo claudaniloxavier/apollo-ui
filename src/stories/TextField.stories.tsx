@@ -24,7 +24,8 @@ export const Primary: Story = {
     height: 'medium',
     placeholder: 'placeholder',
     label: 'Textfield example',
-    hintMessage: 'A hint message here'
+    hintMessage: 'A hint message here',
+    iconPosition: 'left'
   },
 };
 

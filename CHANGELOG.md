@@ -1,5 +1,19 @@
 # Changelog
 
+# [1.2.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.1.0...v1.2.0) (2023-12-07)
+
+
+### Bug Fixes
+
+* change avatar default family ([638c3fa](https://github.com/claudaniloxavier/orion-kit/commit/638c3fa2c264e310d803d8eebc2ea9280a2b6ae2))
+* fix button disabled hover behaviour ([8120f25](https://github.com/claudaniloxavier/orion-kit/commit/8120f256523179228ef042e27aab6f8cb6e4ccbb))
+
+
+### Features
+
+* created textfield component ([eeb770b](https://github.com/claudaniloxavier/orion-kit/commit/eeb770b0fe88604cd733c721888fc9413535506d))
+* finish input styles ([96f2af4](https://github.com/claudaniloxavier/orion-kit/commit/96f2af4ed4e3f0e1a9852c5e704c8488ac63b31d))
+
 # [1.1.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.0.1...v1.1.0) (2023-11-28)
 
 

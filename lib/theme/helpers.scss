@@ -3,3 +3,7 @@
 
   @return $remValue;
 }
+
+@function convert-to-rgba($color, $opacity: 0.24) {
+  @return rgba($color, $opacity);
+}

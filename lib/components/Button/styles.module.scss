@@ -27,6 +27,10 @@ $disabled-opacity: 0.42;
     opacity: $disabled-opacity;
   }
 
+  &:focus {
+    outline: 0;
+  }
+
   .icon {
     display: flex;
     align-items: center;

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.1](https://github.com/claudaniloxavier/orion-kit/compare/v1.2.0...v1.2.1) (2024-02-09)
+
+
+### Bug Fixes
+
+* button ripple effect not working outside lib environment ([de7d9dd](https://github.com/claudaniloxavier/orion-kit/commit/de7d9dddc64a517327d2da8b0972e23b9d623178))
+* input border color ([b1c48cf](https://github.com/claudaniloxavier/orion-kit/commit/b1c48cfb556e73e036c388e556a03b10b3c83e45))
+* input icon showing as default ([00e1db2](https://github.com/claudaniloxavier/orion-kit/commit/00e1db2767b72c928e6b3c1f513e44027763eb58))
+* remove button focus outline ([bc0a1d0](https://github.com/claudaniloxavier/orion-kit/commit/bc0a1d033862ef80f352e79cca06ce28fb458c2e))
+
 # [1.2.0](https://github.com/claudaniloxavier/orion-kit/compare/v1.1.0...v1.2.0) (2023-12-07)
 
 

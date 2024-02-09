@@ -1,12 +1,16 @@
 import { useEffect, useState, RefObject, CSSProperties } from 'react'
 
+// HOOKS
 import useDebounce from './useDebounce'
+
+// ANIMATIONS
+import '../theme/animations/_ripple.scss'
 
 const useRipple = <T extends HTMLElement>(ref: RefObject<T>) => {
   const [ripples, setRipples] = useState<CSSProperties[]>([])
 
   useEffect(() => {
-    if (ref.current) {
+    if (ref.current && typeof window !== 'undefined') {
       const element = ref.current
 
       const clickHandler = (e: MouseEvent) => {

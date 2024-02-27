@@ -10,7 +10,7 @@ import { ButtonProps as Props } from './types'
 import classNames from 'classnames'
 import styles from './styles.module.scss'
 
-const Button: FC<Props> = ({ 
+const Button: FC<Props> = ({
   className,
   children,
   shape = 'solid',
@@ -22,7 +22,7 @@ const Button: FC<Props> = ({
   icon,
   iconPosition = 'left',
   onClick,
-  ...rest 
+  ...rest
 }: Props) => {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const ripples = useRipple(buttonRef)
@@ -30,7 +30,7 @@ const Button: FC<Props> = ({
   return (
     <button
       ref={buttonRef}
-      onClick={disabled ? undefined : onClick} 
+      onClick={disabled ? undefined : onClick}
       disabled={disabled}
       className={classNames(className, styles.button, {
         [styles.primary]: variant === 'primary',
@@ -55,8 +55,8 @@ const Button: FC<Props> = ({
 
         [styles.row]: iconPosition === 'left',
         [styles.rowReverse]: iconPosition === 'right'
-      })} 
-      {...rest} 
+      })}
+      {...rest}
     >
       {ripples}
 
@@ -65,7 +65,7 @@ const Button: FC<Props> = ({
           {icon}
         </span>
       )}
-      
+
       <span className={styles.label}>
         {children}
       </span>

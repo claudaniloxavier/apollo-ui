@@ -1,7 +1,9 @@
 @use '../helpers.scss' as *;
 
-$family-primary: 'Inter', sans-serif;
-$family-secondary: 'Archivo', sans-serif;
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Archivo", sans-serif;
+}
 
 $weight-light: 300;
 $weight-regular: 400;

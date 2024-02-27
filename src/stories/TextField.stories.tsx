@@ -25,7 +25,8 @@ export const Primary: Story = {
     placeholder: 'placeholder',
     label: 'Textfield example',
     hintMessage: 'A hint message here',
-    iconPosition: 'left'
+    iconPosition: 'left',
+    icon: <img src="https://cdn-icons-png.flaticon.com/512/6565/6565893.png" alt="" />
   },
 };
 

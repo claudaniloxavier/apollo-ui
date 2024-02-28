@@ -1,0 +1,283 @@
+@use '../../theme/helpers.scss' as *;
+@use '../../theme/variables/border' as border;
+@use '../../theme/variables/font' as font;
+
+$disabled-opacity: 0.42;
+
+.iconButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: border.$width-thin solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: all 180ms ease-in-out;
+  box-sizing: content-box;
+  padding: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: $disabled-opacity;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.primary {
+    &.solid {
+      background-color: var(--primary-main);
+      color: var(--white);
+
+      &:hover:not(:disabled) {
+        background-color: var(--primary-dark);
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid var(--primary-main);
+      color: var(--primary-main);
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--primary-main) 12%, transparent);
+        color: var(--primary-dark);
+      }
+    }
+
+    &.clear {
+      background: none;
+      color: var(--primary-main);
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--primary-main) 12%, transparent);
+        color: var(--primary-dark);
+      }
+    }
+  }
+
+  &.secondary {
+    &.solid {
+      background-color: var(--secondary-main);
+      color: var(--white);
+
+      &:hover:not(:disabled) {
+        background-color: var(--secondary-dark);
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid var(--secondary-main);
+      color: var(--secondary-main);
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--secondary-main) 12%, transparent);
+        color: var(--secondary-dark);
+      }
+    }
+
+    &.clear {
+      background: none;
+      color: var(--secondary-main);
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--secondary-main) 12%, transparent);
+        color: var(--secondary-dark);
+      }
+    }
+  }
+
+  &.success {
+    &.solid {
+      background-color: var(--success-main);
+      color: var(--white);
+
+      &:hover:not(:disabled) {
+        background-color: var(--success-dark);
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid var(--success-main);
+      color: var(--success-main);
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--success-main) 12%, transparent);
+        color: var(--success-dark);
+      }
+    }
+
+    &.clear {
+      background: none;
+      color: var(--success-main);
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--success-main) 12%, transparent);
+        color: var(--success-dark);
+      }
+    }
+  }
+
+  &.error {
+    &.solid {
+      background-color: var(--error-main);
+      color: var(--white);
+
+      &:hover:not(:disabled) {
+        background-color: var(--error-dark);
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid var(--error-main);
+      color: var(--error-main);
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--error-main) 12%, transparent);
+        color: var(--error-dark);
+      }
+    }
+
+    &.clear {
+      background: none;
+      color: var(--error-main);
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--error-main) 12%, transparent);
+        color: var(--error-dark);
+      }
+    }
+  }
+
+  &.warning {
+    &.solid {
+      background-color: var(--warning-main);
+      color: var(--black);
+
+      &:hover:not(:disabled) {
+        background-color: var(--warning-dark);
+      }
+    }
+
+    &.outlined {
+      border: border.$width-thin solid var(--warning-main);
+      color: var(--warning-main);
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--warning-main) 12%, transparent);
+        color: var(--warning-dark);
+      }
+    }
+
+    &.clear {
+      background: none;
+      color: var(--warning-dark);
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--warning-main) 12%, transparent);
+        color: var(--warning-dark);
+      }
+    }
+  }
+
+  &.default {
+    &.solid {
+      color: var(--transparent-94);
+      background-color: var(--transparent-4);
+
+      &:hover:not(:disabled) {
+        background-color: var(--transparent-8);
+      }
+    }
+
+    &.outlined {
+      color: var(--transparent-94);
+      background: none;
+      border: border.$width-thin solid var(--transparent-16);
+
+      &:hover:not(:disabled) {
+        border-color: var(--transparent-24);
+      }
+    }
+
+    &.clear {
+      color: var(--transparent-94);
+      background: none;
+
+      &:hover:not(:disabled) {
+        background-color: var(--transparent-4);
+      }
+    }
+  }
+
+  &.small {
+    height: to-rem(28);
+    width: to-rem(28);
+    font-size: font.$size-xxxs;
+    line-height: calc(font.$size-xxxs + font.$line-height-primary);
+
+    .content {
+      height: to-rem(18);
+      width: to-rem(18);
+    }
+  }
+
+  &.medium {
+    height: to-rem(36);
+    width: to-rem(36);
+    font-size: font.$size-xxs;
+    line-height: calc(font.$size-xxs + font.$line-height-primary);
+
+    .content {
+      height: to-rem(26);
+      width: to-rem(26);
+    }
+  }
+
+  &.large {
+    height: to-rem(42);
+    width: to-rem(42);
+    font-size: font.$size-xs;
+    line-height: calc(font.$size-xs + font.$line-height-primary);
+
+    .content {
+      height: to-rem(32);
+      width: to-rem(32);
+    }
+  }
+
+  &.xlarge {
+    height: to-rem(48);
+    width: to-rem(48);
+    font-size: font.$size-sm;
+    line-height: calc(font.$size-sm + font.$line-height-primary);
+
+    .content {
+      height: to-rem(38);
+      width: to-rem(38);
+    }
+  }
+
+  &.raised {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      color: inherit;
+    }
+  }
+}

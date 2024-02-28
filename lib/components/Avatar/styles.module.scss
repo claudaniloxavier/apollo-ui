@@ -84,7 +84,7 @@
   }
 
   span {
-    font-family: font.$family-secondary;
+    font-family: var(--font-secondary);
     font-weight: font.$weight-semibold;
   }
 }

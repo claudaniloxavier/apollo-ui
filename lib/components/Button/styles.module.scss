@@ -5,6 +5,7 @@
 @use '../../theme/variables/font' as font;
 
 $disabled-opacity: 0.42;
+$additionalButtonHeight: 2px;
 
 .button {
   position: relative;
@@ -12,9 +13,8 @@ $disabled-opacity: 0.42;
   align-items: center;
   justify-content: center;
   gap: spacing.$spacing-xxs;
-  margin: spacing.$spacing-xxxs;
   min-width: to-rem(54);
-  font-family: font.$family-secondary;
+  font-family: var(--font-secondary);
   font-weight: font.$weight-medium;
   text-transform: uppercase;
   border: border.$width-thin solid transparent;
@@ -53,173 +53,173 @@ $disabled-opacity: 0.42;
 
   &.primary {
     &.solid {
-      background-color: color.$primary-500;
-      color: color.$white;
+      background-color: var(--primary-main);
+      color: var(--white);
 
       &:hover:not(:disabled) {
-        background-color: color.$primary-700;
+        background-color: var(--primary-dark);
       }
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$primary-500;
-      color: color.$primary-500;
+      border: border.$width-thin solid var(--primary-main);
+      color: var(--primary-main);
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$primary-100;
-        color: color.$primary-700;
+        background-color: color-mix(in srgb, var(--primary-main) 12%, transparent);
+        color: var(--primary-dark);
       }
     }
 
     &.text {
-      color: color.$primary-500;
+      color: var(--primary-main);
       border-color: transparent;
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$primary-50;
-        color: color.$primary-700;
+        background-color: color-mix(in srgb, var(--primary-main) 12%, transparent);
+        color: var(--primary-dark);
       }
     }
   }
 
   &.secondary {
     &.solid {
-      background-color: color.$secondary-500;
-      color: color.$white;
+      background-color: var(--secondary-main);
+      color: var(--white);
 
       &:hover:not(:disabled) {
-        background-color: color.$secondary-700;
+        background-color: var(--secondary-dark);
       }
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$secondary-500;
-      color: color.$secondary-500;
+      border: border.$width-thin solid var(--secondary-main);
+      color: var(--secondary-main);
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$secondary-100;
-        color: color.$secondary-700
+        background-color: color-mix(in srgb, var(--secondary-main) 12%, transparent);
+        color: var(--secondary-dark)
       }
     }
 
     &.text {
-      color: color.$secondary-500;
+      color: var(--secondary-main);
       border-color: transparent;
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$secondary-50;
-        color: color.$secondary-700;
+        background-color: color-mix(in srgb, var(--secondary-main) 12%, transparent);
+        color: var(--secondary-dark);
       }
     }
   }
 
   &.success {
     &.solid {
-      background-color: color.$success-500;
-      color: color.$white;
+      background-color: var(--success-main);
+      color: var(--white);
 
       &:hover:not(:disabled) {
-        background-color: color.$success-700;
+        background-color: var(--success-dark);
       }
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$success-500;
-      color: color.$success-500;
+      border: border.$width-thin solid var(--success-main);
+      color: var(--success-main);
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$success-100;
-        color: color.$success-700;
+        background-color: color-mix(in srgb, var(--success-main) 12%, transparent);
+        color: var(--success-dark);
       }
     }
 
     &.text {
-      color: color.$success-500;
+      color: var(--success-main);
       border-color: transparent;
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$success-50;
-        color: color.$success-700;
+        background-color: color-mix(in srgb, var(--success-main) 12%, transparent);
+        color: var(--success-dark);
       }
     }
   }
 
   &.error {
     &.solid {
-      background-color: color.$error-500;
-      color: color.$white;
+      background-color: var(--error-main);
+      color: var(--white);
 
       &:hover:not(:disabled) {
-        background-color: color.$error-700;
+        background-color: var(--error-dark);
       }
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$error-500;
-      color: color.$error-500;
+      border: border.$width-thin solid var(--error-main);
+      color: var(--error-main);
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$error-100;
-        color: color.$error-700;
+        background-color: color-mix(in srgb, var(--error-main) 12%, transparent);
+        color: var(--error-dark);
       }
     }
 
     &.text {
-      color: color.$error-500;
+      color: var(--error-main);
       border-color: transparent;
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$error-50;
-        color: color.$error-700;
+        background-color: color-mix(in srgb, var(--error-main) 12%, transparent);
+        color: var(--error-dark);
       }
     }
   }
 
   &.warning {
     &.solid {
-      background-color: color.$warning-400;
-      color: color.$black;
+      background-color: var(--warning-main);
+      color: color(--black);
 
       &:hover:not(:disabled) {
-        background-color: color.$warning-500;
+        background-color: var(--warning-dark);
       }
     }
 
     &.outlined {
-      border: border.$width-thin solid color.$warning-500;
-      color: color.$warning-500;
+      border: border.$width-thin solid var(--warning-main);
+      color: var(--warning-main);
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$warning-50;
-        color: color.$warning-700;
+        background-color: color-mix(in srgb, var(--warning-main) 12%, transparent);
+        color: var(--warning-dark);
       }
     }
 
     &.text {
-      color: color.$warning-700;
+      color: var(--warning-dark);
       border-color: transparent;
       background: none;
 
       &:hover:not(:disabled) {
-        background-color: color.$warning-50;
-        color: color.$warning-800;
+        background-color: color-mix(in srgb, var(--warning-main) 12%, transparent);
+        color: var(--warning-dark);
       }
     }
   }
 
   &.small {
-    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
-    font-size: font.$size-xxxs;
-    line-height: calc(font.$size-xxxs + font.$line-height-primary);
+    padding: calc(spacing.$spacing-tiny + $additionalButtonHeight) spacing.$spacing-xxs;
+    font-size: font.$size-xxs;
+    line-height: calc(font.$size-xxs + font.$line-height-primary);
 
     .icon {
       width: to-rem(16);
@@ -228,9 +228,9 @@ $disabled-opacity: 0.42;
   }
 
   &.medium {
-    padding: spacing.$spacing-xxxs spacing.$spacing-xxs;
-    font-size: font.$size-xxs;
-    line-height: calc(font.$size-xxs + font.$line-height-primary);
+    padding: calc(spacing.$spacing-xxxs + $additionalButtonHeight) spacing.$spacing-xxs;
+    font-size: font.$size-xs;
+    line-height: calc(font.$size-xs + font.$line-height-primary);
 
     .icon {
       width: to-rem(18);
@@ -239,9 +239,9 @@ $disabled-opacity: 0.42;
   }
 
   &.large {
-    padding: spacing.$spacing-xxs spacing.$spacing-xs;
-    font-size: font.$size-xs;
-    line-height: calc(font.$size-xs + font.$line-height-primary);
+    padding: calc(spacing.$spacing-xxs + $additionalButtonHeight) spacing.$spacing-xs;
+    font-size: font.$size-sm;
+    line-height: calc(font.$size-sm + font.$line-height-primary);
 
     .icon {
       width: to-rem(20);
@@ -250,9 +250,9 @@ $disabled-opacity: 0.42;
   }
 
   &.xlarge {
-    padding: spacing.$spacing-xs spacing.$spacing-sm;
-    font-size: font.$size-sm;
-    line-height: calc(font.$size-sm + font.$line-height-primary);
+    padding: calc(spacing.$spacing-xs + $additionalButtonHeight) spacing.$spacing-sm;
+    font-size: font.$size-md;
+    line-height: calc(font.$size-md + font.$line-height-primary);
 
     .icon {
       width: to-rem(22);

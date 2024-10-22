@@ -1,0 +1,193 @@
+@use '../../theme/variables/border' as border;
+@use '../../theme/variables/spacing' as spacing;
+@use '../../theme/variables/font' as font;
+@use '../../theme/helpers.scss' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: spacing.$spacing-md;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: spacing.$spacing-tiny;
+
+  &.small {
+    .label {
+      font-size: font.$size-xxxs;
+      line-height: calc(font.$size-xxxs + font.$line-height-primary);
+    }
+
+    .control {
+      height: to-rem(32);
+      font-size: font.$size-xxs;
+      line-height: calc(font.$size-xxs + font.$line-height-primary);
+    }
+
+    .message {
+      font-size: 11px;
+      line-height: calc(11px + font.$line-height-primary);
+    }
+  }
+
+  &.medium {
+    .label {
+      font-size: font.$size-xxs;
+      line-height: calc(font.$size-xxs + font.$line-height-primary);
+    }
+
+    .control {
+      height: to-rem(40);
+      font-size: font.$size-xs;
+      line-height: calc(font.$size-xs + font.$line-height-primary);
+    }
+
+    .message {
+      font-size: 13px;
+      line-height: calc(13px + font.$line-height-primary);
+    }
+  }
+
+  &.large {
+    .label {
+      font-size: font.$size-xs;
+      line-height: calc(font.$size-xs + font.$line-height-primary);
+    }
+
+    .control {
+      height: to-rem(48);
+      font-size: font.$size-sm;
+      line-height: calc(font.$size-sm + font.$line-height-primary);
+    }
+
+    .message {
+      font-size: 15px;
+      line-height: calc(15px + font.$line-height-primary);
+    }
+  }
+
+  &.primary {
+    &:focus-within {
+      .label {
+        color: var(--primary-main);
+      }
+
+      .control {
+        border-color: transparent;
+        outline: border.$width-thick solid var(--primary-main);
+      }
+    }
+  }
+
+  &.secondary {
+    &:focus-within {
+      .label {
+        color: var(--secondary-main);
+      }
+
+      .control {
+        border-color: transparent;
+        outline: border.$width-thick solid var(--secondary-main);
+      }
+    }
+  }
+
+  &.error {
+    .label {
+      color: var(--error-main);
+      animation: shakingAnimation 360ms linear;
+    }
+
+    .control {
+      border-color: var(--error-main);
+
+      &:focus-within {
+        border-color: transparent;
+        outline: border.$width-thick solid var(--error-main);
+      }
+    }
+
+    .message {
+      color: var(--error-main);
+      font-weight: font.$weight-bold;
+      animation: shakingAnimation 360ms linear;
+    }
+  }
+}
+
+// Change this to grid and programatically set the number of columns
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+  div {
+    flex: 1;
+  }
+}
+
+.label {
+  font-family: var(--font-primary);
+  color: var(--text-secondary);
+  font-weight: font.$weight-regular;
+  text-align: left;
+}
+
+.control {
+  box-sizing: border-box;
+  background: none;
+  border: border.$width-thin solid var(--transparent-32);
+  padding: 0 spacing.$spacing-xxxs 0 0;
+  border-radius: border.$radius-sm;
+  outline: none;
+
+  select {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 spacing.$spacing-tiny;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+input.control {
+  padding: 0 spacing.$spacing-xxxs;
+}
+
+
+.message {
+  text-align: left;
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--text-tertiary);
+  font-weight: font.$weight-regular;
+
+  display: flex;
+  align-items: center;
+}
+
+@keyframes shakingAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(2px);
+  }
+
+  50% {
+    transform: translateX(-2px);
+  }
+
+  75% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

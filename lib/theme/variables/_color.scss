@@ -23,17 +23,44 @@
   --default-light: #ced4da;
   --default-dark: #868e96;
 
-  --transparent-4: rgba(0, 0, 0, 0.04);
-  --transparent-8: rgba(0, 0, 0, 0.08);
-  --transparent-16: rgba(0, 0, 0, 0.16);
-  --transparent-24: rgba(0, 0, 0, 0.24);
-  --transparent-32: rgba(0, 0, 0, 0.32);
-  --transparent-48: rgba(0, 0, 0, 0.48);
-  --transparent-64: rgba(0, 0, 0, 0.64);
-  --transparent-74: rgba(0, 0, 0, 0.74);
-  --transparent-80: rgba(0, 0, 0, 0.8);
-  --transparent-94: rgba(0, 0, 0, 0.94);
-
   --white: #FFFFFF;
   --black: #000000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --transparent-4: rgba(0, 0, 0, 0.04);
+    --transparent-8: rgba(0, 0, 0, 0.08);
+    --transparent-16: rgba(0, 0, 0, 0.16);
+    --transparent-24: rgba(0, 0, 0, 0.24);
+    --transparent-32: rgba(0, 0, 0, 0.32);
+    --transparent-48: rgba(0, 0, 0, 0.48);
+    --transparent-64: rgba(0, 0, 0, 0.64);
+    --transparent-74: rgba(0, 0, 0, 0.74);
+    --transparent-80: rgba(0, 0, 0, 0.8);
+    --transparent-94: rgba(0, 0, 0, 0.94);
+
+    --text-primary: #333333;
+    --text-secondary: rgba(40, 40, 40, 0.84);
+    --text-tertiary: rgba(40, 40, 40, 0.64);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --transparent-4: rgba(255, 255, 255, 0.04);
+    --transparent-8: rgba(255, 255, 255, 0.08);
+    --transparent-16: rgba(255, 255, 255, 0.16);
+    --transparent-24: rgba(255, 255, 255, 0.24);
+    --transparent-32: rgba(255, 255, 255, 0.32);
+    --transparent-48: rgba(255, 255, 255, 0.48);
+    --transparent-64: rgba(255, 255, 255, 0.64);
+    --transparent-74: rgba(255, 255, 255, 0.74);
+    --transparent-80: rgba(255, 255, 255, 0.8);
+    --transparent-94: rgba(255, 255, 255, 0.94);
+
+    --text-primary: #faf9f7;
+    --text-secondary: rgba(255, 255, 255, 0.84);
+    --text-tertiary: rgba(255, 255, 255, 0.64);
+  }
 }
